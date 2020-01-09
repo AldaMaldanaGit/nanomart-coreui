@@ -15,12 +15,8 @@
 
 # CoreUI Free Angular 2+ Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)]
 
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
--> NODE MODULE FILE ->>> https://drive.google.com/open?id=1gXvAWoCPW2FIHaIGzYDYQSQGAhZtQFRY
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
 
+NODE MODULE FILE ->>> https://drive.google.com/open?id=1gXvAWoCPW2FIHaIGzYDYQSQGAhZtQFRY
 
 ## Table of Contents
 
