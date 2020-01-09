@@ -6,6 +6,11 @@
                   <i class="fa fa-align-justify"></i> Simple Table
                 </div>
                 <div class="card-body">
+                    <div class="row mb-2">
+                      <div class="col-md-4">
+                        <input [(ngModel)]="searchText" class="form-control" placeholder="Search">
+                      </div>
+                    </div>
                     <table class="table table-bordered">
                         <thead>
                           <tr>
@@ -19,7 +24,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr *ngFor="let item of productsData">
+                          <tr *ngFor="let item of productsData | filter: searchText | paginate: { itemsPerPage: count, currentPage: p }">
                             <td>{{item.id}}</td>
                             <td>{{item.barcode}}</td>
                             <td>{{item.nanomart_id}}</td>
@@ -30,16 +35,9 @@
                           </tr>
                         </tbody>
                       </table>
-                      <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-                        <li class="page-item active">
-                          <a class="page-link" href="#">1</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                      </ul>
+                      <div class="text-right">
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                      </div>
                 </div>
             </div>
         </div>

@@ -4,12 +4,15 @@ import { NgModule } from '@angular/core';
 
 import { ProductsComponent } from './products/products.component';
 import { ManagementRoutingModule } from './management-routing.module';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { SearchPipe } from '../search.pipe';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        ManagementRoutingModule
+        ManagementRoutingModule,
+        NgxPaginationModule
         //BaseRoutingModule,
         //BsDropdownModule.forRoot(),
         //TabsModule,
@@ -21,7 +24,8 @@ import { ManagementRoutingModule } from './management-routing.module';
         //TooltipModule.forRoot()
       ],
       declarations: [
-        ProductsComponent
+        ProductsComponent,
+        SearchPipe
         //CardsComponent,
         //FormsComponent,
         //SwitchesComponent,
