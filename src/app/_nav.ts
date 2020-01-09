@@ -12,6 +12,15 @@ export const navItems: INavData[] = [
   },
   {
     title: true,
+    name: 'Management'
+  },
+  {
+    name: 'Products',
+    url: '/management/products',
+    icon: 'icon-drop'
+  },
+  {
+    title: true,
     name: 'Theme'
   },
   {
