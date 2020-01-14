@@ -30,7 +30,7 @@ export class ProductEditComponent implements OnInit {
       console.log(response);
       this.data = response;
       this.productForm = this.editProductFormGroup(this.data);
-    })
+    }) 
   }
 
   editProductFormGroup(data?:any){
