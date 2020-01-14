@@ -14,8 +14,10 @@ export class ApiService {
 
     constructor(private http: HttpClient) { }
 
-    public getToken(): string {
-        return localStorage.getItem('token');
+    httpOptions = {
+        headers: new HttpHeaders({
+            'Content-Type': 'application/json'
+        })
     }
 
     // Handle API errors
@@ -43,5 +45,32 @@ export class ApiService {
             retry(2),
             catchError(this.handleError)
         );
+    }
+
+    createProduct(item): Observable<Products[]> {
+        return this.http
+        .post<Products[]>(this.base_path + 'admin/products', JSON.stringify(item))
+        .pipe(
+            retry(2),
+            catchError(this.handleError)
+        )
+    }
+
+    getListProductById(id): Observable<any>{
+        return this.http
+        .get(this.base_path +  'admin/products' + '/' + id)
+        .pipe(
+            retry(2),
+            catchError(this.handleError)
+        );
+    }
+
+    deleteProductById(id) {
+        return this.http
+        .delete(this.base_path + 'admin/products/' + id)
+        .pipe(
+            retry(2),
+            catchError(this.handleError)
+        )
     }
 }

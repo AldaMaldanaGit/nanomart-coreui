@@ -1,16 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgModule } from '@angular/core';
 
-import { ProductsComponent } from './products/products.component';
 import { ManagementRoutingModule } from './management-routing.module';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchPipe } from '../search.pipe';
+import { ProductsComponent } from './products/products.component';
+import { ProductCreateComponent } from './product-create/product-create.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
         ManagementRoutingModule,
         NgxPaginationModule
         //BaseRoutingModule,
@@ -25,7 +29,9 @@ import { SearchPipe } from '../search.pipe';
       ],
       declarations: [
         ProductsComponent,
-        SearchPipe
+        SearchPipe,
+        ProductCreateComponent,
+        ProductEditComponent
         //CardsComponent,
         //FormsComponent,
         //SwitchesComponent,

@@ -3,9 +3,16 @@ export class Products {
     barcode_id: string;
     name: string;
     description: string;
-    nanomart_id: string;
+    //nanomart_id: string;
     price: number;
-    image_url: string;
-    created_at: string;
-    update_at: string;
+    image_base64: string;
+ }
+
+ export class ProductsEdit {
+    id: number;
+    barcode: string;
+    name: string;
+    description: string;
+    price: number;
+    status: string;
  }
